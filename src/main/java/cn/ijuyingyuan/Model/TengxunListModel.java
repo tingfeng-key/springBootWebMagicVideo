@@ -150,17 +150,6 @@ public class TengxunListModel {
     }
 
     /**
-     * 状态
-     */
-    private AlbumStatusEnum status = AlbumStatusEnum.CREATE;
-    public void setStatus(AlbumStatusEnum status) {
-        this.status = status;
-    }
-    public AlbumStatusEnum getStatus() {
-        return status;
-    }
-
-    /**
      * 收录时间
      */
     private Date createAt;
@@ -196,11 +185,22 @@ public class TengxunListModel {
     /**
      * 解析类型
      */
-    private AlbumParseType parseType;
-    public void setParseType(AlbumParseType parseType) {
+    private Integer parseType = AlbumParseType.TENGXUN.getValue();
+    public void setParseType(Integer parseType) {
         this.parseType = parseType;
     }
-    public AlbumParseType getParseType() {
+    public Integer getParseType() {
         return parseType;
+    }
+
+    /**
+     * 状态
+     */
+    private Integer status = AlbumStatusEnum.CREATE.getValue();
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+    public Integer getStatus() {
+        return status;
     }
 }
